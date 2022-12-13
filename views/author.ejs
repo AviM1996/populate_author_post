@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include("common/head.ejs")%>
+
+    <body>
+        <%-include("common/nav.ejs")%>
+
+            <h1 class="text-center m-5"> Welcome to the Author </h1>
+
+            <div class="container">
+                <h2>Add Author</h2>
+                <form action="/addAuthor" method="post">
+                  <div class="form-group">
+                    <label for="name">Enter Author Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="price" class="form-control" id="email" name="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" class="form-control" id="phone" name="phone" />
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        
+
+            <%-include("common/scripts.ejs")%>
+    </body>
+
+</html>
+
+    
+ 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include("common/head.ejs")%>
+
+    <body>
+        <%-include("common/nav.ejs")%>
+
+            <h1 class="text-center m-5"> Welcome to the index Page </h1>
+
+            <div class="container">
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            
+                            <th scope="col"> Name </th>
+                            <th scope="col"> Email </th>
+                            <th scope="col"> Phone </th>
+                            <th scope="col"> Heading </th>
+                            <th scope="col"> Content </th>
+                            
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let std of authorData) {%>                       
+                        <tr>
+                            <td><%=std.author.authorName%></td>
+                            <td><%=std.author.authorEmail%></td> 
+                            <td><%=std.author.authorPhone%></td>
+                            <td><%=std.postHeading%></td>
+                            <td><%=std.postContent%></td>
+                            
+                        </tr>  
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+            <%-include("common/scripts.ejs")%>
+    </body>
+
+</html>
